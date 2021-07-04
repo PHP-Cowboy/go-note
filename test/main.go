@@ -1,19 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+const (
+	B = 1 << (10 * iota)
+	KB
+	MB
+	GB
+	TB
+)
+
+const (
+	a = iota + 1
+	b = iota + 2
+	c
+	d
+	e
+	f
+)
 
 func main() {
-	defer a()
-	defer b()
-	defer fmt.Println("ccc")
-	defer fmt.Println("ddd")
+	//fmt.Println(math.Sqrt(24*24 + 32*32))
+	fmt.Println(B, KB, MB, GB, TB)
+	fmt.Println(a, b, c, d, e, f)
 	return
-}
-
-func a() {
-	fmt.Println("aaa")
-}
-
-func b() {
-	fmt.Println("bbb")
 }
